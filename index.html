@@ -1201,14 +1201,158 @@
 				<section>
 					<h2>PARTIE 3 :<br /><br />Les applications en mode crypto</h2>
 				</section>
-				<section>Processus mathématique de concurrence pour les « miner »</section>
-				<section>Rémunération du « miner »</section>
-				<section>Rémunération du « valideur »
+				<section>
+					<h3>
+						Processus mathématique de concurrence pour les « miner »
+					</h3>
+					<p>Pour le bitcoin : hash cible
+						<small>0000000000000000057fcc708cf0130d95e27c5819203e9f967ac56e4df598ee</small>
+					</p>
+					<pre><code data-trim data-noescape>
+							SHA256(NONCE + txs bloc en cours + hash parent) < difficulté</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Pourquoi miner ou valider des blocs ?</h3>
+					<ul>
+						<li>
+							Incitation financière
+						</li>
+						<li>
+							Participer et/ou supporter le réseau
+						</li>
+						<li>
+							Par intérêt technologique
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						Rémunération du « miner »
+					</h3>
+					<img src="assets/bitcoin-bloc-reward.webp" alt="">
+					<p>Block reward + transaction fees</p>
+					<!-- https://www.okx.com/learn/what-is-block-reward -->
+				</section>
+				<section>
+					<h3>
+						Coûts du « miner » :
+					</h3>
+					<div class="r-hstack">
+						<figure>
+							<video src="https://file.bitmain.com/www-bitmain/assets/videos/Antminer/S21_series_3d.mov"
+								autoplay muted></video>
+							<figcaption><small>Antminer S21</small></figcaption>
+						</figure>
+						<ul>
+							<li>Prix du matériel ($5400)</li>
+							<li>Electricité</li>
+							<li>Refroidissement</li>
+							<li>Maintenance & réparation</li>
+							<li>(Frais de pool %)</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h3>
+						Freins du « miner » :
+					</h3>
+					<ul>
+						<li>Compétition grandissante (difficulté totale)</li>
+						<li>Matériel dédié e.g. ASICs</li>
+						<li>Impact environnemental</li>
+						<li>Régulation</li>
+					</ul>
+				</section>
+				<section>
+					<h3>
+						Rémunération du « valideur »
+					</h3>
+					<div class="r-hstack">
+						<div>
+							<h4>Consensus rewards</h4>
+							<ul>
+								<li>Attestations</li>
+								<li>block proposals</li>
+								<li>Sync Committees</li>
+								<li>Slashing reports</li>
+							</ul>
+							<img src="https://usa.visa.com/dam/VCOM/regional/na/us/Solutions/issuance-rewards-and-validators-800x450.jpg"
+								alt="">
+						</div>
+						<div>
+							<h4>Execution</h4>
+							<ul>
+								<li>Tips / Priority fees</li>
+								<li>MEV</li>
+							</ul>
+							<img src="https://usa.visa.com/dam/VCOM/regional/na/us/Solutions/mev-boost-share-800x450.jpg"
+								alt="">
+						</div>
+					</div>
+					<!-- https://usa.visa.com/solutions/crypto/cryptoeconomics.html -->
+				</section>
+				<section>
+					<h3>
+						Penalités du « valideur »
+					</h3>
+					<div class="r-hstack">
+						<ul>
+							<li>Slashing</li>
+							<li>Inactivité</li>
+							<li>Pénalités</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						Maîtrise du nb d'ETH mis en jeu
+					</aside>
+				</section>
+				<section>
+					<h3>
+						Rémunération du « valideur »
+					</h3>
 					<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94815685-6463-4ec3-8369-5e7c847cb45c_2400x1400.png"
 						alt="">
-					https://dataalways.substack.com/p/endgame-perils-of-restaking
+					<!-- https://dataalways.substack.com/p/endgame-perils-of-restaking -->
+
+					<aside class="notes">
+						<p>RFR = Y x (1 - D) </p>
+						<p> Y = yield, D = risks discount (downtime...)</p>
+						<p>si pas d'utilisation = frais bas = pas de rewards</p>
+
+					</aside>
 				</section>
-				<section>Exemples et applications DAPPs, DAOs ...</section>
+				<section>
+					<h3>
+						Coûts du « valideur »
+					</h3>
+					<div class="r-hstack">
+						<img src="assets/intel-nuc.jpg" alt="" width="300">
+						<ul>
+							<li>Mise + blocage : 32 ETH = 103 215€</li>
+							<li>Matériel : 300-1000€</li>
+							<li>Maintenance & réparation</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h3>Comparatif Pos vs PoW</h3>
+					<ul>
+						<li>Fini les récompenses, mais penalités avec coût d'entrée</li>
+						<li>Meilleur efficacité énergétique</li>
+						<li>Matériel plus accessible</li>
+						<li>Plus de noeuds = plus de décentralisation</li>
+						<li>Coût d'attaque plus elevé et plus seulement dépendant puissance de calcul et matériel</li>
+						<li>Plus jeune, mais plus d'opportunités de scalabilité</li>
+					</ul>
+					<!-- https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/#comparison-to-proof-of-work -->
+					<aside class="notes">
+						<p> It is important to have both layers of defense: economic incentives to discourage
+							centralized cartels from acting anti-socially, and anti-centralization incentives to
+							discourage cartels from forming in the first place.</p>
+						<!-- https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51 -->
+					</aside>
+				</section>
 				<section>
 					<h3>
 						Développement d’un cas concret : DAO
@@ -1219,29 +1363,145 @@
 						</li>
 						<li>Déploiement d'un token ERC-20</li>
 					</ol>
+					<p>
+						<a href="https://remix.ethereum.org/" target="_blank" rel="external nofollow noreferrer">Remix
+							IDE</a>
+					</p>
+				</section>
+				<section>
+					<img src="assets/ai-copilot-for-entreprise.png" alt="">
 				</section>
 				<section>
 					<h3>
 						Développement d’un cas concret : Hyperledger
 					</h3>
+					<p><a href="https://www.hyperledger.org/projects/fabric" target="_blank"
+							rel="external nofollow noreferrer">
+							Hyperledger Fabric
+						</a>
+					</p>
 					<p>
 						<a href="https://www.hyperledger.org/projects/bevel" target="_blank"
 							rel="external nofollow noreferrer">Hyperledger Bevel</a>
 					</p>
 				</section>
+				<section>
+					<h3>Pour les entreprises</h3>
+					<ul>
+						<li>Participants identifiés/identifiable</li>
+						<li>Permissioned</li>
+						<li>Haut TPS</li>
+						<li>Transactions confirmées rapide</li>
+						<li>Confidentialité des transactions & données</li>
+						<li>Modulaire</li>
+					</ul>
+				</section>
+				<section>
+					<p>Avant avec Hyperledger Composer</p>
+					<img src="https://raw.githubusercontent.com/hyperledger/composer/83a5a1e99c07585c88a67e1ff7377e9f1966de03/latest/assets/img/Composer-Diagram.svg"
+						alt="">
+				</section>
+				<section>
+					<h3>Conception avec Hyperledger Fabric</h3>
+					<ol>
+						<li>Define the Business Network: participants, assets, transactions</li>
+						<!-- Identify the participants (e.g., organizations, roles), assets
+						(e.g., goods, services), and transactions (e.g., operations) in your network. In Fabric, these
+						are represented as chaincode. -->
 
+						<li>Write the Chaincode: business logic of your network</li>
+						<!-- It's written in a general-purpose programming language (like Go or JavaScript), and it defines
+						the operations that can be performed on the ledger. -->
+
+						<li>Model the Assets and Participants</li>
+						<!-- In your chaincode, you'll need to define data
+						structures for
+						the assets and participants in your network. These data structures define the properties of the
+						assets and participants, and the relationships between them. -->
+
+						<li>Implement the Transactions</li>
+						<!-- Transactions are functions in your chaincode that modify the
+						ledger.
+						They take inputs, perform some processing, and then update the state of the ledger. Transactions
+						must be endorsed by the appropriate participants before they can be committed to the ledger. -->
+
+						<li>Test the Chaincode</li>
+						<!-- : Use unit tests to verify the behavior of your chaincode. You can
+						write these
+						in the same language as your chaincode, and run them in a local environment. -->
+
+						<li>Deploy the Chaincode</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Hyperledger Fabric</h3>
+					<img src="assets/Hyperledger-Fabric-OSS-Japan-2019.pdf.png" alt="">
+					<!-- https://events19.linuxfoundation.org/wp-content/uploads/2018/07/OSS-Japan-2019.pdf -->
+				</section>
+				<section>
+					<h3>Hyperledger Fabric</h3>
+					<img src="https://hyperledger-fabric.readthedocs.io/en/latest/_images/Lifecycle-no-package.png"
+						alt="">
+				</section>
+				<section>
+					<h3>Architecture logicielle</h3>
+					<img src="https://wiki.hyperledger.org/download/attachments/71701679/image-2023-11-8_10-53-19.png?version=1&modificationDate=1699458800000&api=v2"
+						alt="">
+				</section>
+				<!-- https://wiki.hyperledger.org/display/fabric/Ecosystem -->
+				<section>
+					<h3>Infra Docker</h3>
+					<img src="https://wiki.hyperledger.org/download/attachments/71701679/image-2023-11-8_10-54-24.png?version=1&modificationDate=1699458865000&api=v2"
+						alt="">
+				</section>
+				<section>
+					<h3>Infra Kubernetes</h3>
+					<img src="https://wiki.hyperledger.org/download/attachments/71701679/image-2023-11-8_10-54-44.png?version=1&modificationDate=1699458885000&api=v2"
+						alt="">
+				</section>
+				<section>
+					<h3>
+						Analyse de données on-chain
+					</h3>
+					Jupyter notebook ou python ?
+				</section>
+				<section>
+					<h3>Decentralized apps, ce qui change</h3>
+					<ul>
+						<li>Solidity pour des smartcontracts sécurisé, efficaces et testés</li>
+						<li>Stockage décentralisé</li>
+						<li>Authentification user</li>
+						<li>Données on-chain/off-chain</li>
+						<li>Immutabilité smartcontract</li>
+						<li>UX</li>
+					</ul>
+				</section>
 				<!-- 7h -->
 				<section>Développement d’un cas concret</section>
 				<!-- 4h -->
 			</section>
 			<section>
-				Conclusion
-			</section>
-
-			<section>
-				Crédits :
-				- Bitcoin icons, MIT
-				- Material Design icons,w Apache 2.0
+				<section>
+					<h2>
+						Récapitulatif
+					</h2>
+				</section>
+				<section>
+					<h3>Choix blockchain pour une entreprise</h3>
+					<ul>
+						<li>B2B, B2C</li>
+						<li>Données publiques/privées ?</li>
+						<li>Dimensionnement et scalabilité</li>
+						<li>Consensus</li>
+						<li>Sécurité</li>
+						<li>Décentralisation</li>
+					</ul>
+				</section>
+				<section>
+					Crédits :
+					- Bitcoin icons, MIT
+					- Material Design icons,w Apache 2.0
+				</section>
 			</section>
 		</div>
 	</div>
